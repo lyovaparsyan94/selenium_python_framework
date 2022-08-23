@@ -96,8 +96,7 @@ class SeleniumDriver:
             self.log.info(f"Sent {data} data to element with locator {locator}, locatorType {locatorType}")
         except:
             self.log.info(f"Cannot send {data} data to the element with locator {locator}, locatorType {locatorType}")
-            # print(print_stack())
-            print(locator, locatorType, 55555555)
+            print(print_stack())
 
     def get_text(self, locator="", locatorType="id", element=None, info=""):
         """Get the text of an element"""
