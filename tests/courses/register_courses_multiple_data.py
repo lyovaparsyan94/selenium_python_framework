@@ -1,4 +1,3 @@
-import time
 import pytest
 import unittest
 from ddt import ddt, data, unpack
@@ -25,8 +24,6 @@ class RegisterMultipleCoursesTests(unittest.TestCase):
         self.courses.enter_course_name(cours_name)
         self.courses.select_course_to_enroll(cours_name)
         self.courses.enroll_course(cc_num, cc_exp, cc_cvc)
-        # self.courses.enroll_course(num=5470874098984444, exp=1225, cvc=100)
-        # time.sleep(2)
         result = self.courses.verify_enroll_failed()
         self.ts.mark_final("test_invalid_enrollment", result, "Enrollment Failed Verification")
         a = self.driver.find_element(by=By.LINK_TEXT, value="ALL COURSES")

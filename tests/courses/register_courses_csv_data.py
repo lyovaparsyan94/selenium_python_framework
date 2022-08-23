@@ -2,7 +2,6 @@ import time
 import pytest
 import unittest
 from ddt import ddt, data, unpack
-from selenium.webdriver.common.by import By
 from pages.home.navigation_page import NavigationPage
 from utilities.read_data import get_csv_data
 from utilities.teststatus import TestStatus
